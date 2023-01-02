@@ -7,71 +7,166 @@ button {
     border-radius: 10px;
     font-weight: bold;
     color: #4c4c4c;
-  }
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  padding: 1em 2em;
+  text-align: center;
+  border-radius: 10px;
+  z-index: 1;
+  background-color: #fff8e2;
+  opacity: 0;
+}
   
-  .modal {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-    padding: 1em 2em;
-    text-align: center;
-    border-radius: 10px;
-    z-index: 1;
-    background-color: #fff8e2;
-    opacity: 0;
-  }
-  
-  .modal.active {
-    opacity: 1;
-  }
-  
-  input, .modal > button {
-    display: block;
-    width: 100%;
-    margin: 20px 0;
-  }
-  
-  input {
-    padding: 10px;
-    box-sizing: border-box;
-    outline: none;
-    border-radius: 10px;
-    border: 0.5px solid gray;
-  }
-  
-  input::placeholder {
-    color: 7f7f7f;
-    transition: 0.5s;
-  }
-  
-  input:focus::placeholder {
-    visibility: hidden;
-    opacity: 0;
-  }
-  
-  .overlay {
-    background-color: rgba(0, 0, 0, 0.3);
-    position: fixed;
-    height: 100vh;
-    width: 100%;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-    opacity: 0;
-    transition: .5s;
-  }
-  
-  .overlay.active {
-    opacity: 1;
-    pointer-events: all;
-  }
-  
-  p {
-    font-size: 13px;
-  }
-  
-  h2 {
-    font-size: 15px;
-  }
+.modal.active {
+  opacity: 1;
+}
+
+input, .modal > button {
+  display: block;
+  width: 100%;
+  margin: 20px 0;
+}
+
+input {
+  padding: 10px;
+  box-sizing: border-box;
+  outline: none;
+  border-radius: 10px;
+  border: 0.5px solid gray;
+}
+
+input::placeholder {
+  color: 7f7f7f;
+  transition: 0.5s;
+}
+
+input:focus::placeholder {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: .5s;
+}
+
+.overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+p {
+  font-size: 13px;
+}
+
+h2 {
+  font-size: 15px;
+}
+
+
+/* 캘린더 */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3% 0;
+}
+
+.calendar_wrap {
+  width: 30%;
+  box-shadow:
+    0 0.0625em 0.25em rgba(0,20,50,0.2),
+    0 0.5em 0.5em 0.125em rgba(0,20,50,0.1);
+  border-radius: 20px;
+  text-align: center;
+  min-width: 480px;
+  overflow: hidden;
+}
+.cal_header {
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 3% 0;
+  width: 100% !important;
+  background-color: #fff8e2;
+}
+
+.btn {
+ display: block;
+ width: 10px;
+ height: 10px;
+ border: 3px solid #000;
+ border-width: 3px 3px 0 0;
+ cursor: pointer;
+}
+.prev_day {
+  transform: rotate(225deg);
+}
+.next_day {
+  transform: rotate(45deg);
+}
+
+.cal_flex {
+  display: flex;
+  flex-wrap: wrap;
+  height: auto;
+}
+.cal_grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+.cal_inner {
+  font-weight: bold;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+}
+
+.cal_blank {
+  background: #eee;
+}
+
+#dateBoard .cal_day {
+  color: #787878;
+  position: relative;
+}
+#dateBoard .cal_memo {
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  line-height: initial;
+}
+
+.today {
+  position: relative;
+  color: #FFFFFF !important;
+}
+
+.today::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-color: #ffd65b;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  content: '';
+}

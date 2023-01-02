@@ -34,21 +34,45 @@
   <script src="../ZIPCOAK/js/main.js"></script>
 </head>
 <body>
-    <button class="sub_btn">뉴스레터 구독하기</button>
-        <div class="modal">
-            <div class="modal_cont">
-                <div class="desc_area">
-                    <h2 class="title">집콕이 생활백서에 오신 걸 환영해요 👋</h2>
-                    <div class="desc_cont">
-                            <input type="email" placeholder="이메일을 입력해주세요">
-                            <button>집콕이 생활백서 뉴스레터 받아보기 🥳</button>
-                            <p>안녕하세요. 집콕이 생활백서 101호 OO입니다.<br>
-                            이제 '집콕백'에서 다양한 정보를 접해보세요 💕
-                            </p>
-                    </div>
+    <!--   calendar start -->
+  <div class="calendar_wrap">
+    <div class="cal_header cal_flex">
+      <div class="btn prev_day"></div>
+      <h2 id="dateTitle"></h2>
+      <div class="btn next_day"></div>
+    </div>
+
+    <div class="cal_grid date_header">
+      <div class="cal_inner">Sun</div>
+      <div class="cal_inner">Mon</div>
+      <div class="cal_inner">Tue</div>
+      <div class="cal_inner">Wed</div>
+      <div class="cal_inner">Thu</div>
+      <div class="cal_inner">Fri</div>
+      <div class="cal_inner">Sat</div>
+    </div>
+
+    <div class="cal_grid" id="dateBoard"></div>
+  </div>
+<!--   //calendar end -->
+
+    <button class="sub_btn dis-no">뉴스레터 구독하기</button>
+    <div class="modal">
+        <div class="modal_cont">
+            <div class="desc_area">
+                <h2 class="title">집콕이 생활백서에 오신 걸 환영해요 👋</h2>
+                <div class="desc_cont">
+                        <input type="email" placeholder="이메일을 입력해주세요">
+                        <button>집콕이 생활백서 뉴스레터 받아보기 🥳</button>
+                        <p>안녕하세요. 집콕이 생활백서 101호 OO입니다.<br>
+                        이제 '집콕백'에서 다양한 정보를 접해보세요 💕
+                        </p>
                 </div>
             </div>
         </div>
+    </div>
     <div class="overlay"></div>
+
+    <!-- 깃허브 vscode 연결 참고사이트 : https://blog.naver.com/PostView.naver?blogId=a5341663&logNo=222345999533&categoryNo=54&parentCategoryNo=0 -->
 </body>
 </html>
