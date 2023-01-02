@@ -1,0 +1,77 @@
+button {
+    background-color: #ffdf6d;
+    outline: none;
+    cursor: pointer;
+    border: 0;
+    padding: 1em 2em;
+    border-radius: 10px;
+    font-weight: bold;
+    color: 4c4c4c;
+  }
+  
+  .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    padding: 1em 2em;
+    text-align: center;
+    border-radius: 10px;
+    z-index: 1;
+    background-color: #fff8e2;
+    opacity: 0;
+  }
+  
+  .modal.active {
+    opacity: 1;
+  }
+  
+  input, .modal > button {
+    display: block;
+    width: 100%;
+    margin: 20px 0;
+  }
+  
+  input {
+    padding: 10px;
+    box-sizing: border-box;
+    outline: none;
+    border-radius: 10px;
+    border: 0.5px solid gray;
+  }
+  
+  input::placeholder {
+    color: 7f7f7f;
+    transition: 0.5s;
+  }
+  
+  input:focus::placeholder {
+    visibility: hidden;
+    opacity: 0;
+  }
+  
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    opacity: 0;
+    transition: .5s;
+  }
+  
+  .overlay.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+  
+  p {
+    font-size: 13px;
+  }
+  
+  h2 {
+    font-size: 15px;
+  }

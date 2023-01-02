@@ -1,0 +1,152 @@
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+button {
+  cursor: pointer;
+}
+h1 {
+  font-size: 20px;
+  color: #000;
+  text-align: center;
+}
+body {
+  padding: 50px;
+}
+.login_wrap {
+  width: 30%;
+  margin: 0 auto;
+  padding: 3%;
+  background-color: #fff8e2;
+  min-width: 500px;
+}
+.field {
+  margin-bottom: 20px;
+}
+.field b {
+  font-size: 15px;
+  margin-bottom: 10px;
+  display: block;
+  color: #4c4c4c;
+}
+.field input, .key_num {
+  display: inline-block;
+  width: 100%;
+  outline: none;
+  box-sizing: border-box;
+  height: 30px;
+  border: 1px solid #aaaaaa;
+  border-radius: 10px;
+  padding: 0 15px;
+}
+.field input:focus {
+  border: 1px solid #ffd371;
+}
+.field.id_cont_box span {
+  position: relative;
+}
+.field.id_cont_box span:before {
+  position: absolute;
+  content:'@zipcock.com';
+  top: 1px;
+  right: 10px;
+  color: #ffd371;
+}
+.birth_wrap .cont_box {
+  display: flex;
+  gap: 20px;
+}
+.birth_wrap .cont_box input {
+  padding: 0 10px;
+}
+.birth_wrap .cont_box select {
+  padding: 0 20px;
+  text-align: center;
+  border: 1px solid #aaaaaa;
+  border-radius: 10px;
+  outline: none;
+}
+.sel_opt {
+  display: inline-block;
+  padding: 20px;
+  color: red;
+}
+.gender_cont > div {
+  display: flex;
+  gap: 10px;
+}
+.gender_cont input {
+  width: inherit;
+}
+.gender_cont label {
+  display: inline-flex;
+  align-items: center;
+}
+.key_num {
+  margin-bottom: 10px;
+  color: #7f7f7f;
+}
+.num_enter {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+.num_enter input {
+  flex: 2;
+}
+button {
+  border-radius: 10px;
+  background-color: #ffd371;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  width: 100%;
+}
+.num_enter button {
+  flex: 1;
+}
+.submit_btn {
+  font-size: 20px;
+  padding: 10px;
+  margin-bottom: 30px;
+  background: #F2994A;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #F2C94C, #F2994A);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #F2C94C, #F2994A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.submit_btn:hover {
+  background: #F2994A;  /* fallback for old browsers */
+}
+.mem_footer {
+  font-size: 11px;
+  text-align: center;
+}
+.mem_footer .top_area {
+  margin-bottom: 10px;
+}
+.mem_footer a{
+  color: #000;
+  text-decoration-line: none;
+  display: inline-block;
+}
+.mem_footer a:hover{
+  color: #000;
+  font-weight: bold;
+}
+.mem_footer a:after{
+  content:"|";
+  display: inline-block;
+  color: #7f7f7f;
+  padding: 0 5px;
+  transform: translateY(-1px);
+}
+.mem_footer a:last-child:after{
+  display: none;
+}
+.bottom_area {
+  font-weight: bold;
+}
+.bottom_area span:hover {
+  color: #ffdf6d;
+  font-weight: bold;
+}
